@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import BaseTemplate from './layouts/BaseTemplate'
 import router from './routes'
+import store from './store'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
@@ -22,5 +23,6 @@ Vue.config.productionTip = false
 
 new Vue({
   render: h => h(BaseTemplate),
-  router
+  router,
+  store
 }).$mount('#app')

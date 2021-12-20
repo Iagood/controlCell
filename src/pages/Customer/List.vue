@@ -7,7 +7,7 @@
       </div>
       <hr>
       <table class="table table-striped table-bordered">
-        <thead>
+        <thead class="table-dark">
           <tr>
             <th scope="col">#</th>
             <th scope="col">First</th>

@@ -6,7 +6,7 @@
             <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
                 <use xlink:href="#bootstrap"></use>
             </svg>
-          <a class="navbar-brand" href="#"><b>Control</b><b style="color:#FFCA2C">Cell</b></a>
+          <a class="navbar-brand" href="/"><b>Control</b><b style="color:#FFCA2C">Cell</b></a> </router-link>
         </a>
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
           <li>
@@ -52,7 +52,7 @@
           </li>
         </ul>
         <div class="col-md-3 text-end">
-            <button type="button" class="btn btn-outline-warning me-2">Login</button>
+          <router-link :to="{name: 'login'}"><button type="button" class="btn btn-outline-warning me-2"> <i class="fas fa-door-open"></i> Sair</button> </router-link>
         </div>
     </nav>
   </div>

@@ -1,6 +1,7 @@
 import Home from '@/pages/Home'
 import Customer from '@/pages/Customer/List'
 import Login from '@/pages/Auth/Login'
+import Register from '@/pages/Auth/Register'
 
 const routes = [
     {
@@ -23,7 +24,16 @@ const routes = [
         path: '/',
         component: () => import('@/layouts/AuthTemplate'),
         children: [
-
+            {
+                path: '/login',
+                component: Login,
+                name: 'login'
+            },
+            {
+                path: '/register',
+                component: Register,
+                name: 'register'
+            }
         ]
     }
 
