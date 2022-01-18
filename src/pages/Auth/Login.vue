@@ -4,7 +4,7 @@
             <div class="rounded d-flex justify-content-center">
                 <div class="col-md-4 col-sm-12 shadow-lg p-5 bg-light">
                     <div class="text-center">
-                        <h3 class="text-dark">Entrar</h3>
+                        <h3 class="text-dark">Logo</h3>
                     </div>
                     <form action="">
                         <div class="p-4">
@@ -19,13 +19,9 @@
                             </div>
                             <div class="text-center">
                                 <button class="btn btn-warning text-center mt-2" type="submit">
-                                    Login
+                                    Entrar
                                 </button>
                             </div>
-                            <p class="text-center mt-5">Ainda não possui uma conta?
-                                <span class="text-dark">Cadastrar</span>
-                            </p>
-                            <p class="text-center text-dark">Esqueceu a sua senha?</p>
                         </div>
                     </form>
                 </div>
