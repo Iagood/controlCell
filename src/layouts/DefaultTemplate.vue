@@ -1,9 +1,11 @@
 <template>
     <div>
+
         <nav-bar/>
         <!-- <div class="container container-body"> -->
             <router-view></router-view>
         <!-- </div> -->
+        <preloader-component></preloader-component>
     </div>
 </template>
 

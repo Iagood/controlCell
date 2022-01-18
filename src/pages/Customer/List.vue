@@ -9,29 +9,16 @@
       <table class="table table-striped table-bordered">
         <thead class="table-dark">
           <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Telefone</th>
+            <th scope="col">Ações</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
+          <tr v-for="(customer, index) in customers" :key="index">
+            <td>{{ customer.name }}</td>
+            <td>{{ '(' + customer.ddd_cellphone + ') ' + customer.cellphone }}</td>
+            <td> <button type="button" class="btn btn-secondary btn-sm">Editar</button> </td>
           </tr>
         </tbody>
       </table>
@@ -39,5 +26,14 @@
   </div>
 </template>
 <script>
-
+export default {
+  mounted() {
+    this.$store.dispatch('getCustomers').catch(response => { this.$vToastify.error(response.message, 'Erro!') })
+  },
+  computed: {
+    customers () {
+      return this.$store.state.customers.items
+    }
+  }
+}
 </script>
