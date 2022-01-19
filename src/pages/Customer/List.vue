@@ -14,11 +14,16 @@
             <th scope="col">Ações</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody v-if="typeof(customers) === Array">
           <tr v-for="(customer, index) in customers" :key="index">
             <td>{{ customer.name }}</td>
             <td>{{ '(' + customer.ddd_cellphone + ') ' + customer.cellphone }}</td>
             <td> <button type="button" class="btn btn-secondary btn-sm">Editar</button> </td>
+          </tr>
+        </tbody>
+        <tbody v-if="typeof(customers) !== Array">
+          <tr>
+            <td style="text-align: center; vertical-align:middle !important" colspan="3">Nenhum registro foi encontrado!</td>
           </tr>
         </tbody>
       </table>

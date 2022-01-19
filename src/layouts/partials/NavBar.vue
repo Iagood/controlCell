@@ -28,7 +28,7 @@
               aria-labelledby="navbarScrollingDropdown"
             >
               <li><router-link :to="{name: 'customer'}" class="dropdown-item"><i class="fas fa-handshake"></i> Clientes</router-link></li>
-              <li><a class="dropdown-item" href="#"><i class="fas fa-box-open"></i> Produtos</a></li>
+              <li><router-link :to="{name: 'product'}" class="dropdown-item"><i class="fas fa-box-open"></i> Produtos</router-link></li>
             </ul>
           </li>
           <li class="nav-item dropdown">

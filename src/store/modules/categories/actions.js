@@ -1,12 +1,12 @@
 import axios from 'axios'
 
-const resource = '/customers'
+const resource = '/categories'
 
 export default {
-    getCustomers({ commit }) {
+    getCategories({ commit }) {
         commit('SET_PRELOADER', true)
         return axios.get(`${resource}`).then(response => {
-            commit('SET_CUSTOMER', response.data.data)
+            commit('SET_CATEGORIES', response.data.data)
         })
         .finally(() => commit('SET_PRELOADER', false))
     }
